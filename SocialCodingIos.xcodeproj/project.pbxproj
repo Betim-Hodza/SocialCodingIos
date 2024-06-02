@@ -11,6 +11,11 @@
 		6106235B2C0BE61C003143C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6106235A2C0BE61C003143C7 /* ContentView.swift */; };
 		6106235D2C0BE620003143C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6106235C2C0BE620003143C7 /* Assets.xcassets */; };
 		610623602C0BE620003143C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6106235F2C0BE620003143C7 /* Preview Assets.xcassets */; };
+		618E32762C0C0FE30060CA88 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618E32752C0C0FE30060CA88 /* Home.swift */; };
+		618E32782C0C11E90060CA88 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618E32772C0C11E90060CA88 /* About.swift */; };
+		618E327A2C0C12510060CA88 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618E32792C0C12510060CA88 /* Events.swift */; };
+		618E327C2C0C12610060CA88 /* Apps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618E327B2C0C12600060CA88 /* Apps.swift */; };
+		618E327F2C0C12780060CA88 /* MavPitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618E327E2C0C12780060CA88 /* MavPitch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		6106235A2C0BE61C003143C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6106235C2C0BE620003143C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6106235F2C0BE620003143C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		618E32752C0C0FE30060CA88 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		618E32772C0C11E90060CA88 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		618E32792C0C12510060CA88 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		618E327B2C0C12600060CA88 /* Apps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apps.swift; sourceTree = "<group>"; };
+		618E327E2C0C12780060CA88 /* MavPitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MavPitch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,7 @@
 		610623572C0BE61C003143C7 /* SocialCodingIos */ = {
 			isa = PBXGroup;
 			children = (
+				618E32742C0C0FC90060CA88 /* Screens */,
 				610623582C0BE61C003143C7 /* SocialCodingIosApp.swift */,
 				6106235A2C0BE61C003143C7 /* ContentView.swift */,
 				6106235C2C0BE620003143C7 /* Assets.xcassets */,
@@ -65,6 +76,26 @@
 				6106235F2C0BE620003143C7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		618E32742C0C0FC90060CA88 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				618E327D2C0C12640060CA88 /* UserApps */,
+				618E32752C0C0FE30060CA88 /* Home.swift */,
+				618E32772C0C11E90060CA88 /* About.swift */,
+				618E32792C0C12510060CA88 /* Events.swift */,
+				618E327B2C0C12600060CA88 /* Apps.swift */,
+				618E327E2C0C12780060CA88 /* MavPitch.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		618E327D2C0C12640060CA88 /* UserApps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserApps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +169,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6106235B2C0BE61C003143C7 /* ContentView.swift in Sources */,
+				618E32782C0C11E90060CA88 /* About.swift in Sources */,
+				618E32762C0C0FE30060CA88 /* Home.swift in Sources */,
+				618E327C2C0C12610060CA88 /* Apps.swift in Sources */,
 				610623592C0BE61C003143C7 /* SocialCodingIosApp.swift in Sources */,
+				618E327F2C0C12780060CA88 /* MavPitch.swift in Sources */,
+				618E327A2C0C12510060CA88 /* Events.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

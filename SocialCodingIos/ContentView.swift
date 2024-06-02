@@ -6,136 +6,34 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct ContentView: View {
     
+    //reminscient of mutable state
     @State var presentSideMenu = false
     @State var selectedSideMenuTab = 0
     
+    //Tells ios to display a screen
     var body: some View {
+        //think of the z axis as being the depth, each view is at a different layer indicated by tag #
         ZStack {
-            
             TabView(selection: $selectedSideMenuTab) {
-                HomeView(presentSideMenu: $presentSideMenu)
+                Home(presentSideMenu: $presentSideMenu)
                     .tag(0)
-                FavoriteView(presentSideMenu: $presentSideMenu)
+                About(presentSideMenu: $presentSideMenu)
                     .tag(1)
-                ChatView(presentSideMenu: $presentSideMenu)
+                Events(presentSideMenu: $presentSideMenu)
                     .tag(2)
-                ProfileView(presentSideMenu: $presentSideMenu)
+                Apps(presentSideMenu: $presentSideMenu)
                     .tag(3)
+                MavPitch(presentSideMenu: $presentSideMenu)
+                    .tag(4)
             }
             
+            // tells if side menu is showing
             SideMenu(isShowing: $presentSideMenu, content: AnyView(SideMenuView(selectedSideMenuTab: $selectedSideMenuTab, presentSideMenu: $presentSideMenu)))
         }
-    }
-}
-
-struct HomeView: View {
-    
-    @Binding var presentSideMenu: Bool
-    
-    var body: some View {
-        VStack {
-            HStack {
-                Button {
-                    presentSideMenu.toggle()
-                } label: {
-                    Image("Menu")
-                        .resizable()
-                        .frame(width: 32, height: 32)
-                }
-                Spacer()
-                
-            }
-            
-            Spacer()
-            Text("Home View")
-            Spacer()
-            
-        }
-        .padding(.horizontal, 24)
-    }
-}
-
-struct FavoriteView: View {
-    
-    @Binding var presentSideMenu: Bool
-    
-    var body: some View {
-        VStack {
-            HStack {
-                Button {
-                    presentSideMenu.toggle()
-                } label: {
-                    Image("Favorite")
-                        .resizable()
-                        .frame(width: 32, height: 32)
-                }
-                Spacer()
-                
-            }
-            
-            Spacer()
-            Text("Favorite View")
-            Spacer()
-            
-        }
-        .padding(.horizontal, 24)
-    }
-}
-
-struct ChatView: View {
-    
-    @Binding var presentSideMenu: Bool
-    
-    var body: some View {
-        VStack {
-            HStack {
-                Button {
-                    presentSideMenu.toggle()
-                } label: {
-                    Image("Chat")
-                        .resizable()
-                        .frame(width: 32, height: 32)
-                }
-                Spacer()
-                
-            }
-            
-            Spacer()
-            Text("Chat View")
-            Spacer()
-            
-        }
-        .padding(.horizontal, 24)
-    }
-}
-
-struct ProfileView: View {
-    
-    @Binding var presentSideMenu: Bool
-    
-    var body: some View {
-        VStack {
-            HStack {
-                Button {
-                    presentSideMenu.toggle()
-                } label: {
-                    Image(systemName: "person.circle.fill")
-                        .resizable()
-                        .frame(width: 32, height: 32)
-                }
-                Spacer()
-                
-            }
-            
-            Spacer()
-            Text("Profile View")
-            Spacer()
-            
-        }
-        .padding(.horizontal, 24)
     }
 }
 
@@ -168,20 +66,23 @@ struct SideMenu: View {
 
 enum SideMenuRowType: Int, CaseIterable{
     case home = 0
-    case favorite
-    case chat
-    case profile
+    case about
+    case events
+    case apps
+    case mavpitch
     
     var title: String {
         switch self {
         case .home:
-            return "home"
-        case .favorite:
-            return "favorite"
-        case .chat:
-            return "chat"
-        case .profile:
-            return "profile"
+            return "Home"
+        case .about:
+            return "About Us"
+        case .events:
+            return "Events"
+        case .apps:
+            return "Apps"
+        case .mavpitch:
+            return "MavPitch"
         }
     }
     
@@ -189,12 +90,14 @@ enum SideMenuRowType: Int, CaseIterable{
         switch self {
         case .home:
             return "Home"
-        case .favorite:
-            return "Favorite"
-        case .chat:
+        case .about:
             return "Chat"
-        case .profile:
-            return "person.circle.fill"
+        case .events:
+            return "Events"
+        case .apps:
+            return "Apps"
+        case .mavpitch:
+            return "MavPitch"
         }
     }
 }
@@ -243,7 +146,7 @@ struct SideMenuView: View {
         VStack(alignment: .center) {
             HStack {
                 Spacer()
-                Image("profile-image")
+                Image("momo")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 100, height: 100)
