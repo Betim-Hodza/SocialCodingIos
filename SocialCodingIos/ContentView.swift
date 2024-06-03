@@ -112,7 +112,7 @@ struct SideMenuView: View {
             
             ZStack {
                 Rectangle()
-                    .fill(.white)
+                    .fill(Color.sidebar)
                     .frame(width: 270)
                     .shadow(color: .purple.opacity(0.1), radius: 5, x: 0, y: 3)
                 
@@ -133,7 +133,7 @@ struct SideMenuView: View {
                 .padding(.top, 100)
                 .frame(width: 270)
                 .background(
-                    Color.white
+                    Color.sidebar
                 )
             }
             
@@ -158,13 +158,13 @@ struct SideMenuView: View {
                 Spacer()
             }
             
-            Text("Baytizzel")
+            Text("MOBI")
                 .font(.system(size: 18, weight: .bold))
-                .foregroundColor(.black)
+                .foregroundColor(.mobiBorder)
             
-            Text("Future IOS/Android Dev")
+            Text("Magic of Making Apps")
                 .font(.system(size: 14, weight: .semibold))
-                .foregroundColor(.black.opacity(0.5))
+                .foregroundColor(.mobiBorder.opacity(0.5))
             
         }
     }
@@ -177,7 +177,7 @@ struct SideMenuView: View {
             VStack (alignment: .leading) {
                 HStack(spacing: 20){
                     Rectangle()
-                        .fill(isSelected ? .purple : .white)
+                        .fill(isSelected ? .purple : .sidebar)
                         .frame(width: 5)
                     
                     ZStack{
@@ -197,7 +197,7 @@ struct SideMenuView: View {
         }
         .frame(height: 50)
         .background(
-            LinearGradient(colors: [isSelected ? .purple.opacity(0.5) : .white, .white], startPoint: .leading, endPoint: .trailing)
+            LinearGradient(colors: [isSelected ? .purple.opacity(0.5) : .sidebar, .sidebar], startPoint: .leading, endPoint: .trailing)
         )
     }
     

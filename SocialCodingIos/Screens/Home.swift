@@ -52,18 +52,11 @@ struct Home: View {
                 MOBISocialsBttn(url: "https://www.github.com/mobibyte", img: "Github")
                 //FaceBook
                 MOBISocialsBttn(url: "https://www.facebook.com/codewithmobi", img: "Facebook")
-                //Outlook
-                MOBISocialsBttn(url: "contact@codewith.mobi", img: "Outlook")
             }
             .padding(.horizontal, 10)
             
-            
-            
-        
-            //filler text
             Spacer()
-            Text("Home")
-            Spacer()
+            
             
         }
         .padding(.horizontal, 24)
