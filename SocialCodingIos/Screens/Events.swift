@@ -15,6 +15,8 @@ import SwiftSoup
 struct Event {
     let title: String
     let date: String
+    let location: String
+    let time: String
     let description: String
 }
 
@@ -42,11 +44,29 @@ class WebScraper {
                 var events: [Event] = []
                 
                 for element in eventElements {
-                    let title = try element.select("h2.event-title").text() //scraping for element TBC
-                    let date = try element.select("span.event-date").text()
-                    let description = try element.select("p.event-description").text()
+                    let title = try element.select("h1").first()?.text() ?? "No Title" //grab the title from h1 bracket
                     
-                    let event = Event(title: title, date: date, description: description)
+                    let paragraphs = try element.select("p")
+                    var date = ""
+                    var location = ""
+                    var time = ""
+                    var description = ""
+                    
+                    //goes through each paragraph to look for emoji's to grab the elements (was a tough solution to think of)
+                    for p in paragraphs {
+                        let text = try p.text()
+                        if text.contains("🗓️") {
+                            date = text.replacingOccurrences(of: "🗓️", with: "")
+                        } else if text.contains("🗺️") {
+                            location = text.replacingOccurrences(of: "🗺️", with: "")
+                        } else if text.contains("🕕") {
+                            time = text.replacingOccurrences(of: "🕕", with: "")
+                        } else if !text.contains("📍") && !text.contains("Join our Twitch Stream here") {
+                            description += text + " "
+                        }
+                    }
+                    
+                    let event = Event(title: title, date: date, location: location, time: time, description: description)
                     events.append(event)
                 }
                 
