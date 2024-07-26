@@ -105,6 +105,7 @@ struct Events: View {
             
             Spacer()
             Text("MOBI's Events")
+                .font(.title)
             Spacer()
             
             if isLoading {
@@ -114,19 +115,29 @@ struct Events: View {
                     .foregroundColor(.red)
             } else {
                 List(events, id: \.title) { event in
-                    VStack(alignment: .leading) {
-                        Text(event.title)
-                            .font(.headline)
-                        Text(event.date)
-                            .font(.subheadline)
-                        Text(event.description)
-                            .font(.body)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color.clear)
+                            .stroke(Color.mobiBorder, lineWidth: 2)
+                        
+                        HStack(alignment: .top) {
+                            VStack(alignment: .leading) {
+                                Text(event.title)
+                                    .font(.headline)
+                                Text(event.date)
+                                    .font(.subheadline)
+                                Text(event.description)
+                                    .font(.body)
+                            }
+                            .padding() // Add padding around the text
+                            
+                        }
                     }
                 }
             }
             
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, 10)
         .onAppear(perform: loadEvents)
     }
     
@@ -145,9 +156,7 @@ struct Events: View {
                 }
             }
         }
-        
     }
-    
 }
 
 
