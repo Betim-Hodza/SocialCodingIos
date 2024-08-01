@@ -1,7 +1,7 @@
 <h1 align="center">
   <a href="https://github.com/Betim-Hodza/SocialCodingIos">
     <!-- Please provide path to your logo here -->
-    <img src="docs/images/logo.svg" alt="Logo" width="100" height="100">
+    <img src="docs/images/mobi_logo.png" alt="Logo" width="100" height="100">
   </a>
 </h1>
 
@@ -54,12 +54,9 @@
 
 <table><tr><td>
 
-> **[?]**
-> Provide general information about your project here.
-> What problem does it (intend to) solve?
-> What is the purpose of your project?
-> Why did you undertake it?
-> You don't have to answer all the questions -- just the ones relevant to your project.
+> Social Coding for iOS is a an app for MOBI members
+> to be up to date with the club, create apps within the app,
+> and learn what MOBI is about!
 
 <details>
 <summary>Screenshots</summary>
@@ -78,39 +75,35 @@
 
 ### Built With
 
-> **[?]**
-> Please provide the technologies that are used in the project.
+> This is built in XCode on MacOS using Swift & SwiftUI
+> In theory someone could write code w/ out xcode, 
+> but its pretty hard to debug if your app works or not.
 
 ## Getting Started
 
 ### Prerequisites
 
-> **[?]**
-> What are the project requirements/dependencies?
+> The project depends on Foundation import from apple, and SwiftSoup
+> This is because the Events page uses webscraping to get its data.
+> *[NOTE]* This is built on the base of XCODE 15 (my macbook is older)
 
 ### Installation
 
-> **[?]**
-> Describe how to install and get started with the project.
+> The first thing you would need to do is clone this repo, 
+> git clone https://github.com/Betim-Hodza/SocialCodingIos.git
+> After cloning, just open the project in XCode and you can get started!
 
 ## Usage
 
-> **[?]**
-> How does one go about using it?
-> Provide various use cases and code examples here.
-
-## Roadmap
-
-See the [open issues](https://github.com/Betim-Hodza/SocialCodingIos/issues) for a list of proposed features (and known issues).
-
-- [Top Feature Requests](https://github.com/Betim-Hodza/SocialCodingIos/issues?q=label%3Aenhancement+is%3Aopen+sort%3Areactions-%2B1-desc) (Add your votes using the 👍 reaction)
-- [Top Bugs](https://github.com/Betim-Hodza/SocialCodingIos/issues?q=is%3Aissue+is%3Aopen+label%3Abug+sort%3Areactions-%2B1-desc) (Add your votes using the 👍 reaction)
-- [Newest Bugs](https://github.com/Betim-Hodza/SocialCodingIos/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
+> Currently the only way to demo it on a real iPhone, is to plug a
+> iPhone into a mac, and build directly on your phone, which requires a lot of things.
+> Or if you have a M series mac (or intel depending how new it is) you can run a 
+> virtual iPhone and test it out that way.
 
 ## Support
 
-> **[?]**
-> Provide additional ways to contact the project maintainer/maintainers.
+> The best way to reach out to us is to put out something in the issues tab,
+> and we will get to you as soon as we can.
 
 Reach out to the maintainer at one of the following places:
 
@@ -122,8 +115,6 @@ Reach out to the maintainer at one of the following places:
 If you want to say **thank you** or/and support active development of SocialCodingIos:
 
 - Add a [GitHub Star](https://github.com/Betim-Hodza/SocialCodingIos) to the project.
-- Tweet about the SocialCodingIos.
-- Write interesting articles about the project on [Dev.to](https://dev.to/), [Medium](https://medium.com/) or your personal blog.
 
 Together, we can make SocialCodingIos **better**!
 
@@ -155,6 +146,5 @@ See [LICENSE](LICENSE) for more information.
 
 ## Acknowledgements
 
-> **[?]**
-> If your work was funded by any organization or institution, acknowledge their support here.
-> In addition, if your work relies on other software libraries, or was inspired by looking at other work, it is appropriate to acknowledge this intellectual debt too.
+> The MOBI name is not mine (Betim-Hodza) but the Club MOBI's I'm just another club member
+> Creating cool stuff!
